@@ -1,5 +1,10 @@
 {
+  "title": "XOXO Skate Shop",
   "description": "Xoxo Skate Shop offers a complete online shopping experience for skaters, surfers, and rock enthusiasts in Marseille, featuring product orders, statistics, and goal tracking.",
+  "language": "fr",
+  "icons": {
+    "icon": "/favicon.svg"
+  },
   "robots": {
     "index": false
   },
