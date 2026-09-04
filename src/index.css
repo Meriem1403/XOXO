@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #080808;
+  --color-fg: #f0f0f0;
+  --color-card: #111111;
+  --color-card-fg: #f0f0f0;
+  --color-primary: #CCFF00;
+  --color-primary-fg: #080808;
+  --color-accent: #FF3800;
+  --color-accent-fg: #f0f0f0;
+  --color-secondary: #1c1c1c;
+  --color-muted: #222222;
+  --color-muted-fg: #666666;
+  --color-border: #2a2a2a;
+
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #080808;
+  color: #f0f0f0;
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #CCFF00; }
+
+::selection {
+  background: #CCFF00;
+  color: #080808;
+}
+
+.font-display { font-family: 'Anton', sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+.grunge-border {
+  border: 1px solid #2a2a2a;
+  position: relative;
+}
+
+.lime-glow {
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.15);
+}
+
+.noise-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+input, select, textarea {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  color: #f0f0f0;
+  font-family: 'Barlow', sans-serif;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #CCFF00;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #1c1c1c;
+  border-radius: 1px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #CCFF00, #99cc00);
+  transition: width 0.6s ease;
+}
